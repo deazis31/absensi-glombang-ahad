@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Glombang Ahad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Absensi Glombang Ahad</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="navbar-nav">
+            <li><a href="index.html">Absensi</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Daftar Absensi Berdasarkan Kelompok</h1>
+
+        <div class="kelompok">
+            <h2>Kelompok Karanggayam</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Putra</h3>
+                    <div class="table-responsive">
+                        <table id="karanggayam-putra">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Hadir</th>
+                                    <th>Tidak Hadir</th>
+                                    <th>Alasan Tidak Hadir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Aan Dwi Setyawan</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 1, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 1, 'karanggayam')"></td><td><input type="text" class="reason-input putra-1" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>2</td><td>Ahnaf Widad Maulana</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 2, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 2, 'karanggayam')"></td><td><input type="text" class="reason-input putra-2" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>3</td><td>Ali Ma'sum</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 3, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 3, 'karanggayam')"></td><td><input type="text" class="reason-input putra-3" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>4</td><td>Hafidz Rizha Albana</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 4, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 4, 'karanggayam')"></td><td><input type="text" class="reason-input putra-4" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>5</td><td>Galank Anungrah Satria Ramadhan</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 5, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 5, 'karanggayam')"></td><td><input type="text" class="reason-input putra-5" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>6</td><td>Alfito Putra Pamungkas</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 6, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 6, 'karanggayam')"></td><td><input type="text" class="reason-input putra-6" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>7</td><td>Wahid Rahmatullah</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 7, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 7, 'karanggayam')"></td><td><input type="text" class="reason-input putra-7" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>8</td><td>Alif Hasan Mustofa</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 8, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 8, 'karanggayam')"></td><td><input type="text" class="reason-input putra-8" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>9</td><td>Fazad Yulianto</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 9, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 9, 'karanggayam')"></td><td><input type="text" class="reason-input putra-9" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>10</td><td>Khozim Fauzi</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 10, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 10, 'karanggayam')"></td><td><input type="text" class="reason-input putra-10" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>11</td><td>Nurkholis Syafrial Aburiza</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 11, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 11, 'karanggayam')"></td><td><input type="text" class="reason-input putra-11" placeholder="Alasan (misal: sakit)"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Putri</h3>
+                    <div class="table-responsive">
+                        <table id="karanggayam-putri">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Hadir</th>
+                                    <th>Tidak Hadir</th>
+                                    <th>Alasan Tidak Hadir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Siti Azizah</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 1, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 1, 'karanggayam')"></td><td><input type="text" class="reason-input putri-1" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>2</td><td>Nila Failani</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 2, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 2, 'karanggayam')"></td><td><input type="text" class="reason-input putri-2" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>3</td><td>Aulia</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 3, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 3, 'karanggayam')"></td><td><input type="text" class="reason-input putri-3" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>4</td><td>Annisa Nur Rahma</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 4, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 4, 'karanggayam')"></td><td><input type="text" class="reason-input putri-4" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>5</td><td>Bilqis Silva H</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 5, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 5, 'karanggayam')"></td><td><input type="text" class="reason-input putri-5" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>6</td><td>Rada Zahratul J</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 6, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 6, 'karanggayam')"></td><td><input type="text" class="reason-input putri-6" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>7</td><td>Soviyah oktiningsih</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 7, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 7, 'karanggayam')"></td><td><input type="text" class="reason-input putri-7" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>8</td><td>Alfinna</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 8, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 8, 'karanggayam')"></td><td><input type="text" class="reason-input putri-8" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>9</td><td>Salsa</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 9, 'karanggayam')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 9, 'karanggayam')"></td><td><input type="text" class="reason-input putri-9" placeholder="Alasan (misal: sakit)"></td></tr>
+                           
+                                
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kelompok">
+            <h2>Kelompok Sidodadi</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Putra</h3>
+                    <div class="table-responsive">
+                        <table id="sidodadi-putra">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Hadir</th>
+                                    <th>Tidak Hadir</th>
+                                    <th>Alasan Tidak Hadir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Abdul Aziz</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 1, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 1, 'sidodadi')"></td><td><input type="text" class="reason-input putra-1" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>2</td><td>Yajid Nur Faisal Hakim</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 2, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 2, 'sidodadi')"></td><td><input type="text" class="reason-input putra-2" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>3</td><td>Ridwan Saifullah</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 3, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 3, 'sidodadi')"></td><td><input type="text" class="reason-input putra-3" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>4</td><td>Ridwan Pillar Nur Dain</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 4, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 4, 'sidodadi')"></td><td><input type="text" class="reason-input putra-4" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>5</td><td>Muhammad Dafa Alfarizi</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 5, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 5, 'sidodadi')"></td><td><input type="text" class="reason-input putra-5" placeholder="Alasan (misal: sakit)"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Putri</h3>
+                    <div class="table-responsive">
+                        <table id="sidodadi-putri">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Hadir</th>
+                                    <th>Tidak Hadir</th>
+                                    <th>Alasan Tidak Hadir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Ayu Shofiyah</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 1, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 1, 'sidodadi')"></td><td><input type="text" class="reason-input putri-1" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>2</td><td>Zalia Anggraini</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 2, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 2, 'sidodadi')"></td><td><input type="text" class="reason-input putri-2" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>3</td><td>Nurul Nur Hayati</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 3, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 3, 'sidodadi')"></td><td><input type="text" class="reason-input putri-3" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>4</td><td>Siska Yunike Putri</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 4, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 4, 'sidodadi')"></td><td><input type="text" class="reason-input putri-4" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>5</td><td>Naisyila Yunike Putri</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 5, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 5, 'sidodadi')"></td><td><input type="text" class="reason-input putri-5" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>6</td><td>Deviana Kurnia Ningrum</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 6, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 6, 'sidodadi')"></td><td><input type="text" class="reason-input putri-6" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>7</td><td>Nabila Hasan Latifah</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 7, 'sidodadi')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 7, 'sidodadi')"></td><td><input type="text" class="reason-input putri-7" placeholder="Alasan (misal: sakit)"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kelompok">
+            <h2>Kelompok Kwagean</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Putra</h3>
+                    <div class="table-responsive">
+                        <table id="kwagean-putra">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Hadir</th>
+                                    <th>Tidak Hadir</th>
+                                    <th>Alasan Tidak Hadir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Hanan Raditya Weka Putra</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 1, 'kwagean')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 1, 'kwagean')"></td><td><input type="text" class="reason-input putra-1" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>2</td><td>Zhafir Rasyad Daifuloh</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 2, 'kwagean')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 2, 'kwagean')"></td><td><input type="text" class="reason-input putra-2" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>3</td><td>Hamka Hamzah</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 3, 'kwagean')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 3, 'kwagean')"></td><td><input type="text" class="reason-input putra-3" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>4</td><td>Ega Ramadhani</td><td><input type="checkbox" class="hadir-putra" onchange="toggleAttendance(this, 'tidak-putra', 'putra', 4, 'kwagean')"></td><td><input type="checkbox" class="tidak-putra" onchange="toggleAttendance(this, 'hadir-putra', 'putra', 4, 'kwagean')"></td><td><input type="text" class="reason-input putra-4" placeholder="Alasan (misal: sakit)"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Putri</h3>
+                    <div class="table-responsive">
+                        <table id="kwagean-putri">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama</th>
+                                    <th>Hadir</th>
+                                    <th>Tidak Hadir</th>
+                                    <th>Alasan Tidak Hadir</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Zuli Atun Kharimah</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 1, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 1, 'kwagean')"></td><td><input type="text" class="reason-input putri-1" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>2</td><td>Bilqis Banati Sholehah</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 2, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 2, 'kwagean')"></td><td><input type="text" class="reason-input putri-2" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>3</td><td>Salsabila Fella Jasmine</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 3, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 3, 'kwagean')"></td><td><input type="text" class="reason-input putri-3" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>4</td><td>Arlins Alicia Putri</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 4, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 4, 'kwagean')"></td><td><input type="text" class="reason-input putri-4" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>5</td><td>Nurul Setyowati Prasetyo</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 5, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 5, 'kwagean')"></td><td><input type="text" class="reason-input putri-5" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>6</td><td>Fadila Nur Aini</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 6, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 6, 'kwagean')"></td><td><input type="text" class="reason-input putri-6" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>7</td><td>Syifa Ferlita</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 7, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 7, 'kwagean')"></td><td><input type="text" class="reason-input putri-7" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>8</td><td>Zalfa Dahayu</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 8, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putra', 'putri', 8, 'kwagean')"></td><td><input type="text" class="reason-input putri-8" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>9</td><td>Desta Fitasari</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 9, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 9, 'kwagean')"></td><td><input type="text" class="reason-input putri-9" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>10</td><td>Putri Auliya</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 10, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 10, 'kwagean')"></td><td><input type="text" class="reason-input putri-10" placeholder="Alasan (misal: sakit)"></td></tr>
+                                <tr><td>11</td><td>Khoirul Iffah</td><td><input type="checkbox" class="hadir-putri" onchange="toggleAttendance(this, 'tidak-putri', 'putri', 11, 'kwagean')"></td><td><input type="checkbox" class="tidak-putri" onchange="toggleAttendance(this, 'hadir-putri', 'putri', 11, 'kwagean')"></td><td><input type="text" class="reason-input putri-11" placeholder="Alasan (misal: sakit)"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tidakHadirList">
+            <h2>Daftar Tidak Hadir</h2>
+            <div class="tidak-hadir-container">
+                <div class="tidak-hadir-putra">
+                    <h3>Putra</h3>
+                    <ul id="tidakHadirPutra"></ul>
+                </div>
+                <div class="tidak-hadir-putri">
+                    <h3>Putri</h3>
+                    <ul id="tidakHadirPutri"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="saveAttendance()">Simpan Absensi</button>
+            <button onclick="sendToWhatsApp()">Kirim ke WA</button>
+            <button onclick="downloadAttendance()">Unduh Absensi</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

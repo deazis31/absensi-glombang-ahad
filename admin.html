@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Absensi Glombang Ahad</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul class="navbar-nav">
+            <li><a href="index.html">Absensi</a></li>
+            <li><a href="admin.html">Admin Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div id="loginSection">
+            <h1>Login Admin</h1>
+            <div class="login-form">
+                <label for="adminName">Nama:</label>
+                <input type="text" id="adminName" placeholder="Masukkan nama">
+                <label for="adminPassword">Password:</label>
+                <input type="password" id="adminPassword" placeholder="Masukkan password">
+                <button onclick="loginAdmin()">Login</button>
+            </div>
+        </div>
+
+        <div id="dashboardSection" style="display: none;">
+            <h1>Dashboard Admin</h1>
+            <div class="chart-container-wrapper">
+                <div class="chart-container">
+                    <h2>Jumlah Kehadiran</h2>
+                    <canvas id="attendanceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2>Individu Sering Izin</h2>
+                    <canvas id="reasonChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h2>Individu Tanpa Keterangan</h2>
+                    <canvas id="noReasonChart"></canvas>
+                </div>
+            </div>
+            <div class="warning-section">
+                <h2>Peringatan: Tidak Hadir 3 Kali Tanpa Keterangan</h2>
+                <div class="table-responsive">
+                    <table id="warningTable">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Kelompok</th>
+                                <th>Jumlah</th>
+                            </tr>
+                        </thead>
+                        <tbody id="warningTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

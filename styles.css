@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar-nav li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+.kelompok {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.reason-input {
+    display: none;
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    touch-action: manipulation;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#tidakHadirList {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tidak-hadir-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tidak-hadir-putra, .tidak-hadir-putri {
+    flex: 1;
+    min-width: 0;
+}
+
+.tidak-hadir-putra ul, .tidak-hadir-putri ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tidak-hadir-putra li, .tidak-hadir-putri li {
+    padding: 5px 0;
+    font-size: 0.9em;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1em;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.chart-container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.chart-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 33%;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.chart-container canvas {
+    max-height: 300px;
+}
+
+.warning-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #4CAF50;
+        padding: 10px;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        font-size: 0.85em;
+        padding: 6px;
+        min-width: 80px;
+    }
+
+    .reason-input {
+        font-size: 0.85em;
+    }
+
+    .tidak-hadir-container {
+        flex-direction: column;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px;
+    }
+
+    .login-form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .login-form input {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .chart-container-wrapper {
+        flex-direction: column;
+    }
+
+    .chart-container {
+        max-width: 100%;
+    }
+
+    .warning-section table {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    th, td {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+
+    .reason-input {
+        font-size: 0.8em;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+}
